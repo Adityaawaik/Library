@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #434343;
+}
+
+.heading {
+  text-align: center;
+  margin: 1rem 0;
+  color: white;
+}
+
+.user-books {
+  display: flex;
+  justify-content: center;
+}
+
+.book-container {
+  box-shadow: 1px 2px 3px 0px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #f0f8ff47;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  min-height: 15vh;
+  animation: displayer 1.5s;
+}
+
+.add-book-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.addBook {
+  position: relative;
+  padding: 0.8rem 2rem;
+  border: none;
+  background: linear-gradient(135deg, #4fc3f7, #0288d1);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 136, 255, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addBook::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: 1s;
+}
+
+.addBook:hover::before {
+  left: 125%;
+}
+
+.addBook:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 136, 255, 0.6);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 2rem 0;
+}
+
+form {
+  box-shadow: 2px 2px 3px white;
+  width: 50%;
+  background-color: #f0f8ff47;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  display: none;
+  margin-top: 1rem;
+  animation: displayer 1.5s;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 0.5rem 0;
+  outline: none;
+}
+
+.book-name-author-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-name,
+.author-Name {
+  width: 45%;
+}
+.author-Name {
+  margin-right: 0.5rem;
+}
+
+#author_Name,
+#book_Name {
+  width: 100%;
+  margin-right: 1rem;
+}
+
+#pages_reads {
+  width: 100%;
+}
+
+.add-your-book-btn {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.add-your-book {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00c853, #b2ff59);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
+  transition: all 0.3s ease;
+}
+
+.add-your-book:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0, 200, 83, 0.7);
+  background: linear-gradient(135deg, #b2ff59, #00c853);
+}
+
+.close {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 0.2rem;
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.book-data-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.book-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inital-sentence {
+  text-align: center;
+  color: white;
+  margin: 1rem 0;
+}
+
+.conditionalMsg {
+  margin: 1rem 0;
+}
+
+.bookRead {
+  padding: 0.2rem;
+  border: none;
+  border: 1px solid green;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.bookRead:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  padding: 0.2rem;
+  border: none;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.deleteBtn:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.randomId {
+  display: none;
+}
+
+.greeting {
+  text-align: center;
+}
+
+.book-card {
+  width: 50%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.book-handler {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-pages-read {
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.user-book-name,
+.user-author-name {
+  margin: 1rem 0;
+  word-break: break-all;
+  width: 100%;
+}
+
+.author-name {
+  font-weight: 600;
+}
+
+.pages-read-by-user {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pages-reads {
+  width: 80%;
+}
+
+@keyframes displayer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .book-container {
+    width: 80%;
+  }
+
+  .book-name-author-name-container {
+    flex-direction: column;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .book-name,
+  .author-Name {
+    width: 80%;
+  }
+
+  #author_Name,
+  #book_Name {
+    width: 100%;
+  }
+
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .addBook {
+    padding: 0.5rem;
+  }
+
+  .book-card {
+    width: 80%;
+  }
+}

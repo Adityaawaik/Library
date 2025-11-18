@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1 class="heading">My Library</h1>
+    <div class="user-books">
+      <div class="book-container">
+        <div class="add-book-container">
+          <h2 class="greeting"></h2>
+          <div class="add-book-btn">
+            <button class="addBook">Add your favourite book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form action="">
+        <h3 class="conditionalMsg"></h3>
+        <div class="book-info">
+          <div class="book-name-author-name-container">
+            <div class="book-name">
+              <label for="book_Name">Book Name : </label>
+              <br />
+              <input type="text" id="book_Name" />
+            </div>
+
+            <div class="author-Name">
+              <label for="author_Name">Author Name : </label>
+              <br />
+              <input type="text" name="" id="author_Name" />
+            </div>
+          </div>
+
+          <div class="pages-read-by-user">
+            <div class="pages-reads">
+              <label for="pages_reads">Pages Read : </label>
+              <br />
+              <input type="number" name="" id="pages_reads" />
+            </div>
+          </div>
+        </div>
+
+        <div class="add-your-book-btn">
+          <button class="add-your-book">Add</button>
+        </div>
+        <button class="close">&times;</button>
+      </form>
+    </div>
+
+    <h2 class="inital-sentence">There is no book added by you</h2>
+
+    <div class="book-data"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
